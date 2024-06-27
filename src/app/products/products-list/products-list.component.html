@@ -1,0 +1,9 @@
+<div class="row">
+<div class="row custom-row">
+    <div class="col-xs-12">        
+        <app-products-item
+            *ngFor="let productEl of products"
+            [product]="productEl"
+            (productSelected)="onProductSelected(productEl)"></app-products-item>
+    </div>
+</div>

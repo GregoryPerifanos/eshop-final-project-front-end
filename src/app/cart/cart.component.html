@@ -1,0 +1,22 @@
+<div class="cart p-3 rounded">
+  <h2 class="text-center ">Shopping Cart</h2>
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <ul class="list-group">
+      <li class="list-group-item " *ngFor="let item of cartItems">
+        <div class="d-flex justify-content-between align-items-center custom-input">
+          <div>
+            <h5 class="form-label">{{ item.name }}</h5>
+            <p class="form-label">Price: ${{ item.price }}</p>
+            <p class="form-label">Quantity: {{ item.quantity }}</p>
+          </div>
+          <button class="btn btn-danger" (click)="removeItem(item.id)">Remove</button>
+        </div>
+      </li>
+    </ul>
+    <h3 class="text-center mt-3">Total: ${{ getTotalPrice() }}</h3>
+    <button class="btn btn-success btn-block mt-3" (click)="placeOrder()">Place Order</button>
+  </div>
+  <ng-template #emptyCart>
+    <p class="text-center text-orange">Your cart is empty.</p>
+  </ng-template>
+</div>

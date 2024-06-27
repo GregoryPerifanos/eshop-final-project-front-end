@@ -1,0 +1,21 @@
+<div class="row justify-content-center">
+    <div class="col-4">
+        <h3 class="text-center"><Strong>Login</Strong></h3>
+      <ul class="nav nav-pills nav-justified mb-3" ></ul>
+
+
+      <form (ngSubmit)="onSubmitLogin(loginForm)" #loginForm="ngForm" class="login-form">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="username">Username</label>
+          <input class="form-control custom-input text-center" type="text" id="username" name="login" [(ngModel)]="user.username" required>
+        </div>
+  
+        <div class="form-outline mb-4">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-control custom-input text-center" type="password" id="password" name="password" [(ngModel)]="user.password" required>        
+        </div>
+  
+        <button type="submit" class="btn btn-primary mt-3">Login</button>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,72 @@
+<div class="container mt-5 custom-signup-form">
+    <h2 class="form-label">Sign Up</h2>
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+      <div class="form-group">
+        <label for="firstname" class="form-label">First Name</label>
+        <input
+          type="text"
+          id="firstname"
+          class="form-control text-center"
+          name="firstname"
+          [(ngModel)]="user.firstname"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input
+          type="text"
+          id="lastname"
+          class="form-control text-center"
+          name="lastname"
+          [(ngModel)]="user.lastname"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          id="username"
+          class="form-control text-center"
+          name="username"
+          [(ngModel)]="user.username"
+          required
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control text-center"
+          name="email"
+          [(ngModel)]="user.email"
+          required
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control text-center"
+          name="password"
+          [(ngModel)]="user.password"
+          required
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="balance" class="form-label">Balance</label>
+        <input
+          type="balance"
+          id="balance"
+          class="form-control text-center"
+          name="balance"
+          [(ngModel)]="user.balance"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mt-3 custom-button" [disabled]="!signupForm.valid">Sign Up</button>
+    </form>
+  </div>

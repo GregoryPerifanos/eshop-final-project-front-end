@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AxiosService } from './axios.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eshop';
+
+  loadedFeature = 'home';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+
 }

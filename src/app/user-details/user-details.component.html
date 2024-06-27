@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h2 class="form-label">Update User</h2>
+    <form (ngSubmit)="onSubmit(updateForm)" #updateForm="ngForm">
+      <div class="form-group mb-3">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control text-center" [(ngModel)]="user.username" name="username">
+      </div>
+      <div class="form-group mb-3">
+        <label for="balance">Balance</label>
+        <input type="number" id="balance" class="form-control text-center" [(ngModel)]="user.balance" name="balance" required>
+      </div>
+      <div class="form-group mb-3">
+        <label for="password">New Password</label>
+        <input type="password" id="password" class="form-control text-center" [(ngModel)]="user.newPassword" name="newPassword">
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
